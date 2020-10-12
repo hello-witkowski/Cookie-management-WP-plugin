@@ -1,0 +1,189 @@
+
+.cookie-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: #232323b5;
+    height: 100vh;
+    width: 100%;
+}
+
+.cookie-modal-inner {
+    width: 33.3%;
+    min-width: 400px;
+    color: #000;
+    background-color: #fff;
+    overflow-y: scroll;
+    height: inherit;
+    padding: 25px 20px;
+}
+
+.modal-navi-box {
+    margin: 30px 0 45px;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.modal-buttons {
+    display: flex;
+}
+
+.modal-button-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-modal-btn {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: .3s;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-buttons > div:first-child {
+    margin-right: 10px;
+}
+
+.modal-buttons > div:last-child {
+    margin-left: 10px;
+}
+
+.single-modal-btn.btn-accept-all {
+    background-color: #009d00;
+    border-color: #1aa91a;
+}
+
+.single-modal-btn.btn-accept-all:hover {
+    background-color: #1aa91a;
+    border-color: #009d00;
+}
+
+.single-modal-btn.btn-accept-partial, .single-modal-btn.btn-accept-specific {
+    background-color: #868686;
+    border-color: #989898;
+}
+
+.single-modal-btn.btn-accept-partial:hover, .single-modal-btn.btn-accept-specific:hover {
+    background-color: #989898;
+    border-color: #868686;
+}
+
+.modal-btn-description {
+    margin-top: 5px;
+    color: #888;
+    font-size: 10px;
+    text-align: center;
+}
+
+.cookie-modal-btn:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 35px solid #fecc60;
+    border-bottom: 35px solid #fecc60;
+    border-top: 35px solid transparent;
+    border-right: 35px solid transparent;
+    cursor: pointer;
+}
+
+.cookie-modal-btn i.fas.fa-cookie-bite {
+    font-size: 24px;
+    position: relative;
+    bottom: 8px;
+    left: 8px;
+}
+
+.cookie-modal-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100001;
+}
+
+.single-cookie-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-option-name {
+    flex: 1;
+}
+
+.cookie-option-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 10px;
+    background-color: #3a3a3c;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.cookie-option-switch {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cookie-option-switch-dot {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #fecc60;
+    border-radius: 15px;
+}
+
+.cookie-option-switch.switch_disabled .cookie-option-switch-dot {
+    background-color: #8c8c8c;
+}
+
+.cookie-modal-options > div:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.switch_off .cookie-option-switch-dot {
+    left: -1px;
+}
+
+.switch_on .cookie-option-switch-dot {
+    right: -1px;
+}
+
+.stepbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+    .cookie-modal-inner {
+        width: 100%;
+    }
+}
