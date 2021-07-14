@@ -7,7 +7,6 @@
     $(document).ready(function() {
 
         $('.cookie-modal-btn').click(function() {
-            console.log('asd');
             switchModal();
         });
 

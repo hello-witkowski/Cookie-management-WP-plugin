@@ -6,6 +6,7 @@ class CM_postRequest {
     public function __construct() {}
 
     public function checkAllCookies() {
+        $_SESSION["cookie_accepted"] = 'true';
         setcookie('cookie_accepted', '1', time()+62208000, '/', $_SERVER['HTTP_HOST']);
 
 //        setcookie('cookie_functional', '1', time()+62208000, '/', $_SERVER['HTTP_HOST']);
@@ -19,7 +20,6 @@ class CM_postRequest {
             'cookie_social' => '1',
             'cookie_comercial' => '1',
         ]);
-
         die;
     }
 

@@ -21,4 +21,11 @@ class CM_Modal{
 
         return false;
     }
+    public function isCookieSession() {
+        if(isset($_COOKIE['cookie_accepted'])) {
+            return true;
+        }
+
+        return false;
+    }
 }

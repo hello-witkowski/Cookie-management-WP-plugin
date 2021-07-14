@@ -1,30 +1,34 @@
 <div class="cookie-modal-btn"><i class="fas fa-cookie-bite"></i></div>
-<div class="cookie-modal-container<?php echo $this->isCookieSet() ? ' cookie_set' : ''; ?>" style="display: none;">
+<div class="cookie-modal-container<?php echo isset($_SESSION['cookie_accepted']) ? ' cookie_set' : ''; ?>"
+     style="display: none;">
     <div class="cookie-modal-inner" style="display: none;">
         <div class="stepbox stepbox-1">
-            <p>Ta strona używa plików cookies</p>
+            <p>Kancelaria Radcy Prawnego Piotr Wódkowski używa plików cookies</p>
 
             <ul>
                 <li>koniecznych do korzystania ze strony <b>(cookies niezbędne)</b></li>
-                <li>koniecznych do korzystania ze statystyk dot.
+                <li>koniecznych do korzystania przeze mnie ze statystyk dot.
                     zachowania użytkowników w narzędziu Google Analytics <b>(cookies analityczne)</b></li>
-                <li>koniecznych do współpracy z zewnętrznymi serwisami, np. Messenger,
+                <li>koniecznych do współpracy z zewnętrznymi serwisami, których być może jesteś użytkownikiem – np.
+                    Messenger,
                     Facebook, Twitter, Youtube czy Linkedin <b>(cookies społecznościowe)</b></li>
                 <li>koniecznych do wyświetlania Ci reklam w zewnętrznych serwisach za pomocą narzędzia Facebook Pixel
-                    oraz wyświetlania Ci propozycji zapisu na newsletter <b>(cookies marketingowe)</b></li>
+                    oraz wyświetlania Ci propozycji zapisu na newsletter za pomocą narzędzia Freshmail <b>(cookies
+                        marketingowe)</b></li>
             </ul>
 
             <p>
                 Możesz zaakceptować korzystanie z wszystkich typów plików cookies lub dokonać wyboru,
                 a także zmienić w każdej chwili swoje ustawienia.
-                Więcej informacji o Twoich prawach w <a href="<?php echo get_home_url();?>/polityka-prywatnosci/"><b>Polityce prywatności</b></a>.
+                Więcej informacji o Twoich prawach w <a href="http://marketingnalegalu.pl/polityka-prywatnosci/"><b>Polityce
+                        prywatności</b></a>.
             </p>
 
             <div class="modal-navi-box">
                 <div class="modal-buttons">
                     <div class="modal-button-box">
                         <div class="single-modal-btn btn-accept-all">
-                            <span>Włącz wszystkie cookies!</span>
+                            <span>Zjem wszystkie!</span>
                         </div>
                         <div class="modal-btn-description">
                             akceptuję wszystkie pliki cookies
@@ -33,7 +37,7 @@
 
                     <div class="modal-button-box">
                         <div class="single-modal-btn btn-accept-partial">
-                            <span>Chcę wybrać cookies!</span>
+                            <span>CHCĘ WYBRAĆ SMAKI!</span>
                         </div>
                         <div class="modal-btn-description">
                             chcę ustawić swoje preferencje
@@ -58,18 +62,19 @@
                     </div>
                 </div>
 
-<!--                <div class="single-cookie-option">-->
-<!--                    <div class="cookie-option-name">Cookies funkcjonalne</div>-->
-<!--                    <div class="cookie-option-switch-box">-->
-<!--                        <div class="cookie-option-switch cookie_functional --><?php //echo isset($_COOKIE['cookie_functional']) && $_COOKIE['cookie_functional'] === '1' ? 'switch_on' : 'switch_off'; ?><!--">-->
-<!--                            <div class="cookie-option-text">-->
-<!--                                <div>Wł.</div>-->
-<!--                                <div>Wył.</div>-->
-<!--                            </div>-->
-<!--                            <div class="cookie-option-switch-dot"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="single-cookie-option">-->
+                <!--                    <div class="cookie-option-name">Cookies funkcjonalne</div>-->
+                <!--                    <div class="cookie-option-switch-box">-->
+                <!--                        <div class="cookie-option-switch cookie_functional -->
+                <?php //echo isset($_COOKIE['cookie_functional']) && $_COOKIE['cookie_functional'] === '1' ? 'switch_on' : 'switch_off'; ?><!--">-->
+                <!--                            <div class="cookie-option-text">-->
+                <!--                                <div>Wł.</div>-->
+                <!--                                <div>Wył.</div>-->
+                <!--                            </div>-->
+                <!--                            <div class="cookie-option-switch-dot"></div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
 
                 <div class="single-cookie-option">
                     <div class="cookie-option-name">Cookies analityczne</div>
@@ -115,7 +120,7 @@
                 <div class="modal-buttons">
                     <div class="modal-button-box">
                         <div class="single-modal-btn btn-accept-all">
-                            <span>Lubię wszystkie cookies!</span>
+                            <span>LUBIĘ WSZYSTKIE CIASTKA!</span>
                         </div>
                         <div class="modal-btn-description">
                             akceptuję wszystkie pliki cookies
@@ -124,7 +129,7 @@
 
                     <div class="modal-button-box">
                         <div class="single-modal-btn btn-accept-specific">
-                            <span>Wybrałem swoje cookies</span>
+                            <span>WYBRAŁEM SMAKI</span>
                         </div>
                         <div class="modal-btn-description">
                             chcę zapisać moje ustawienia
