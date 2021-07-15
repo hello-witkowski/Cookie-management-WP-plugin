@@ -1,5 +1,5 @@
 <div class="cookie-modal-btn"><i class="fas fa-cookie-bite"></i></div>
-<div class="cookie-modal-container<?php echo isset($_SESSION['cookie_accepted']) ? ' cookie_set' : ''; ?>"
+<div class="cookie-modal-container<?php echo (isset($_SESSION['cookie_accepted']) || isset($_COOKIE['cookie_accepted'])) ? ' cookie_set' : ''; ?>"
      style="display: none;">
     <div class="cookie-modal-inner" style="display: none;">
         <div class="stepbox stepbox-1">
